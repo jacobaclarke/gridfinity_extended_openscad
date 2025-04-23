@@ -14,15 +14,15 @@ use <modules/module_gridfinity.scad>
 /*<!!start gridfinity_basic_cup!!>*/
 /* [General Cup] */
 // X dimension. grid units (multiples of 42mm) or mm.
-width = [2, 0]; //0.1
+width = [1, 0]; //0.1
 // Y dimension. grid units (multiples of 42mm) or mm.
 depth = [1, 0]; //0.1
 // Z dimension excluding. grid units (multiples of 7mm) or mm.
-height = [3, 0]; //0.1
+height = [0.2, 0]; //0.1
 // Fill in solid block (overrides all following options)
 filled_in = "disabled"; //[disabled, enabled, enabledfilllip:"Fill cup and lip"]
 // Wall thickness of outer walls. default, height < 8 0.95, height < 16 1.2, height > 16 1.6 (Zack's design is 0.95 mm)
-wall_thickness = 0;  // .01
+wall_thickness = 1.2;  // .01
 //under size the bin top by this amount to allow for better stacking
 headroom = 0.8; // 0.1
 
@@ -83,7 +83,7 @@ divider_slot_spanning = 2;
 
 /* [Base] */
 // Enable magnets
-enable_magnets = true;
+enable_magnets = false;
 // Enable screws
 enable_screws = true;
 //size of magnet, diameter and height. Zack's original used 6.5 and 2.4
@@ -91,7 +91,7 @@ magnet_size = [6.5, 2.4];  // .1
 //create relief for magnet removal
 magnet_easy_release = "auto";//["off","auto","inner","outer"] 
 //size of screw, diameter and height. Zack's original used 3 and 6
-screw_size = [3, 6]; // .1
+screw_size = [4.4, 6]; // .1
 //size of center magnet, diameter and height. 
 center_magnet_size = [0,0];
 // Sequential Bridging hole overhang remedy is active only when both screws and magnets are nonzero (and this option is selected)
